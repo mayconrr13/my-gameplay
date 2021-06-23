@@ -8,7 +8,7 @@ interface IBackgroundProps {
   children: ReactNode;
 }
 
-export function Bakcground({ children }: IBackgroundProps) {
+export function Background({ children }: IBackgroundProps) {
   const { secondary80, secondary100 } = theme.colors
   return (
     <LinearGradient
