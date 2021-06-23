@@ -12,7 +12,7 @@ export function ButtonIcon({text, ...rest}: ButtonIconProps) {
   return (
     <TouchableOpacity style={styles.container} {...rest}>
       <View style={styles.iconWrapper}>
-        <Image source={DiscordImg} style={styles.image}/>
+        <Image source={DiscordImg} style={styles.icon}/>
       </View>
 
       <Text style={styles.text}>{text}</Text>
