@@ -3,17 +3,24 @@ import { Text, View } from 'react-native'
 import { FlatList } from 'react-native-gesture-handler'
 
 import { Profile } from '../../components/Profile'
-import { Background } from '../../components/Background'
 import { ButtonAdd } from '../../components/ButtonAdd'
+import { Background } from '../../components/Background'
 import { CategorySelect } from '../../components/CategorySelect'
 import { ListHeader } from '../../components/ListHeader'
 import { Appointment } from '../../components/Appointment'
 import { ListDivider } from '../../components/ListDivider'
 
 import { styles } from './styles'
+import { useNavigation } from '@react-navigation/native'
 
 export function Home(){
   const [category, setCategory] = useState<string>('')
+
+  const navigation = useNavigation()
+
+  function handleAppointmentDetails() {
+    navigation.navigate('AppointmentDetails')
+  }
 
   const appointments = [
     {
@@ -67,7 +74,10 @@ export function Home(){
             data={appointments} 
             keyExtractor={item => item.id}
             renderItem={({ item }) => (
-              <Appointment data={item} />
+              <Appointment 
+                data={item} 
+                onPress={handleAppointmentDetails}
+              />
             )}
             ItemSeparatorComponent={() => <ListDivider />}
             style={styles.matches}
