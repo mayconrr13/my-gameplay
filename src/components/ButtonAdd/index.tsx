@@ -5,18 +5,11 @@ import { MaterialCommunityIcons } from '@expo/vector-icons'
 
 import { styles } from './styles'
 import { theme } from '../../global/styles/theme'
-import { useNavigation } from '@react-navigation/native'
 
 
-export function ButtonAdd({...rest}: RectButtonProps) {
-  const navigation = useNavigation()
-
-  function handleAddNewAppointment() {
-    navigation.navigate('AppointmentDetails')
-  }
-  
+export function ButtonAdd({...rest}: RectButtonProps) {  
   return (
-    <RectButton 
+    <RectButton       
       style={styles.container} 
       {...rest}
     >
@@ -24,7 +17,7 @@ export function ButtonAdd({...rest}: RectButtonProps) {
         name="plus"
         color={theme.colors.heading}
         size={24}
-        onPress={handleAddNewAppointment}
+        
       />
     </RectButton>
   )

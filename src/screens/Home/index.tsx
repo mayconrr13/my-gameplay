@@ -53,13 +53,17 @@ export function Home(){
     categoryId === category ? setCategory('') : setCategory(categoryId)
   }
 
+  function handleAppointmentCreate() {
+    navigation.navigate('AppointmentCreate')
+  }
+
   return (
     <Background>
       <View style={styles.container} >
         <View style={styles.header}>
           <Profile />
 
-          <ButtonAdd />
+          <ButtonAdd onPress={handleAppointmentCreate} />
         </View>    
 
         <CategorySelect 
