@@ -1,6 +1,6 @@
 import { useNavigation } from '@react-navigation/core'
 import React from 'react'
-import { Image, Text, View, StatusBar } from 'react-native'
+import { Image, Text, View } from 'react-native'
 
 import IllustrationImg from '../../assets/illustration.png'
 import { Background } from '../../components/Background'

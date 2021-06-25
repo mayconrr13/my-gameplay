@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import { Text, View } from 'react-native'
+import { useNavigation } from '@react-navigation/native'
+import { View } from 'react-native'
 import { FlatList } from 'react-native-gesture-handler'
 
 import { Profile } from '../../components/Profile'
@@ -11,7 +12,6 @@ import { Appointment } from '../../components/Appointment'
 import { ListDivider } from '../../components/ListDivider'
 
 import { styles } from './styles'
-import { useNavigation } from '@react-navigation/native'
 
 export function Home(){
   const [category, setCategory] = useState<string>('')
