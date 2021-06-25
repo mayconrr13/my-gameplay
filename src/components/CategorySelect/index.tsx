@@ -9,10 +9,11 @@ import { styles } from './styles'
 
 interface ICategorySelectProps {
   categorySelected: string;
-  setCategory: (categoryId: string) => void
+  setCategory: (categoryId: string) => void;
+  hasCheckBox?: boolean;
 }
 
-export function CategorySelect({ categorySelected, setCategory }: ICategorySelectProps) {
+export function CategorySelect({ categorySelected, setCategory, hasCheckBox = false }: ICategorySelectProps) {
   return (    
     <ScrollView 
       horizontal 
@@ -28,6 +29,7 @@ export function CategorySelect({ categorySelected, setCategory }: ICategorySelec
             icon={category.icons}
             checked={category.id === categorySelected}
             onPress={() => setCategory(category.id)}
+            hasCheckBox={hasCheckBox}
           />
         ))
       }
