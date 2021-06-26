@@ -9,6 +9,11 @@ import { Rajdhani_500Medium, Rajdhani_700Bold } from '@expo-google-fonts/rajdhan
 
 import { Routes } from './src/routes'
 import { Background } from './src/components/Background'
+import { AuthProvider } from './src/hooks/useAuth'
+import { LogBox } from 'react-native'
+
+//ignorando erro durante o desenvolvimento
+LogBox.ignoreLogs(['You are not currently signed in to Expo on your development machine.'])
 
 export default function App(){
   
@@ -31,7 +36,9 @@ export default function App(){
         translucent
       />
 
-      <Routes />
+      <AuthProvider>
+        <Routes />
+      </AuthProvider>
     </Background>
   )
 }
