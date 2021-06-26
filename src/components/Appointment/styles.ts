@@ -8,6 +8,14 @@ export const styles = StyleSheet.create({
     justifyContent: 'space-between',
     paddingHorizontal: 24,
   },  
+  guildContainer: {
+    height: 68,
+    width: 64,
+    borderRadius: 8,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginRight: 20,
+  },
   content: {
     flex: 1,
   },
